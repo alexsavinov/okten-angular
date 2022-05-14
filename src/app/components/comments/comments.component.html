@@ -1,1 +1,6 @@
-<app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+<div class="container">
+  <div>
+    <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+  </div>
+  <router-outlet></router-outlet>
+</div>

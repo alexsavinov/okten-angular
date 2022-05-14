@@ -10,10 +10,14 @@ import {IUser} from "../interfaces";
 })
 export class UserService {
 
-  constructor(private HttpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   getAll(): Observable<IUser[]> {
-    return this.HttpClient.get<IUser[]>(urls.users);
+    return this.httpClient.get<IUser[]>(urls.users);
+  }
+
+  getById(id:string): Observable<IUser> {
+    return this.httpClient.get<IUser>(`${urls.users}/${id}`);
   }
 }

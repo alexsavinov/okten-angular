@@ -10,10 +10,14 @@ import {IPost} from "../interfaces";
 })
 export class PostService {
 
-  constructor(private HttpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   getAll(): Observable<IPost[]> {
-    return this.HttpClient.get<IPost[]>(urls.posts);
+    return this.httpClient.get<IPost[]>(urls.posts);
+  }
+
+  getById(id:string): Observable<IPost> {
+    return this.httpClient.get<IPost>(`${urls.posts}/${id}`);
   }
 }
