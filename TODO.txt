@@ -1,3 +1,2 @@
-  <!--  HW-->
-  <!--  /posts/Id   with url pass   history.state-->
-  <!--  /comments/ID   ddos-->
+Сделать все, что было сделано с users (отдельные модули).
+Только с постами и комментариями.
