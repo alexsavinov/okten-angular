@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-  title = 'angular-lesson03-hw';
+  title = 'angular-lesson04-hw';
 }

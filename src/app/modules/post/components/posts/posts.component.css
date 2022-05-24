@@ -1,4 +1,10 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin: 10px;
+  align-content: start;
+}
+
+.left {
+  min-width: 50%;
 }

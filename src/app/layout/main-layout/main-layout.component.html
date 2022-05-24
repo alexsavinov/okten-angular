@@ -1,2 +1,7 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
+
+<p *ngIf="loading" class="loading">
+  <mat-spinner [diameter]="25"></mat-spinner>
+</p>
+
