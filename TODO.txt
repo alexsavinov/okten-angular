@@ -1,2 +1,4 @@
-Сделать все, что было сделано с users (resolvers, guards).
-Только с постами и комментариями.
+ - EventEmitter.
+ - Pipes.
+ - Behavior subject.
+ - Lifecycle hook.
