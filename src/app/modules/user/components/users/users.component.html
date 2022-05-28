@@ -1,6 +1,6 @@
 <div class="container">
   <div class="left">
-    <app-user *ngFor="let user of users" [user]="user"></app-user>
+    <app-user *ngFor="let user of users" [user]="user" (userEmitter)="catchUserEmit($event)"></app-user>
   </div>
   <router-outlet></router-outlet>
 </div>

@@ -12,7 +12,8 @@ export class MyGuardGuard implements CanActivate, CanDeactivate<unknown> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    return confirm('canActivate? (в users - при переходе на /users) (впустить?)');
+    // return confirm('canActivate? (в users - при переходе на /users) (впустить?)');
+    return true;
   }
 
   canDeactivate(
@@ -21,7 +22,8 @@ export class MyGuardGuard implements CanActivate, CanDeactivate<unknown> {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    return confirm('canDeactivate? (в users - при переходе всюду, кроме /users) (выпустить?)');
+    // return confirm('canDeactivate? (в users - при переходе всюду, кроме /users) (выпустить?)');
+    return true;
   }
 
 }
