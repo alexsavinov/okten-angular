@@ -1,6 +1,6 @@
 <div routerLinkActive="active">
-  {{user.id}}) <a (click)="emit(user)" routerLink="{{user.id}}" [state]="{user}">{{user.name}}</a>
-  <button type="button" class="btn btn-primary">
-    Single Button
+  {{user.id}}) <a (click)="emit(user)" routerLink="{{user.id}}">{{user.name}}</a>
+  <button (click)="saveToStorage()" type="button" class="btn btn-secondary btn-sm m-1">
+    saveToStorage
   </button>
 </div>

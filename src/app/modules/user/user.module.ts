@@ -7,6 +7,7 @@ import {UserComponent} from "./components/user/user.component";
 import {UserDetailsComponent} from "./components/user-details/user-details.component";
 import {UserRoutingModule} from './user-routing.module';
 import {UsersComponent} from "./components/users/users.component";
+import {CommentModule} from "../comment/comment.module";
 
 
 @NgModule({
@@ -15,11 +16,12 @@ import {UsersComponent} from "./components/users/users.component";
     UsersComponent,
     UserDetailsComponent
   ],
-  imports: [
-    CommonModule,
-    UserRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        CommonModule,
+        UserRoutingModule,
+        HttpClientModule,
+        CommentModule
+    ],
   providers: [
     UserService,
     UserResolveService

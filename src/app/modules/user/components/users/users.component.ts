@@ -1,7 +1,12 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output
+} from '@angular/core';
 
 import {IUser} from "../../interfaces";
-import {UserService} from "../../services";
+import {UserService, DataService} from "../../services";
 
 
 @Component({
@@ -12,10 +17,11 @@ import {UserService} from "../../services";
 export class UsersComponent implements OnInit {
 
   users: IUser[];
+
   @Output()
   userEmitter = new EventEmitter<IUser>();
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private dataService: DataService) {
   }
 
   ngOnInit(): void {
@@ -25,5 +31,13 @@ export class UsersComponent implements OnInit {
   catchUserEmit(userCatch: IUser): void {
     console.log('catchUserEmit', userCatch);
     this.userEmitter.emit(userCatch);
+  }
+
+  readFromStorage() {
+    console.log('readFromStorage running..')
+    this.dataService.storage.subscribe(value => {
+      console.log('readFromStorage', value);
+    });
+
   }
 }

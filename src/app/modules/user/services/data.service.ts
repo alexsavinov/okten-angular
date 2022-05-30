@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 
 import {IUser} from "../interfaces";
@@ -9,7 +9,6 @@ import {IUser} from "../interfaces";
 })
 export class DataService {
 
-  // storage = new BehaviorSubject<IUser>({id: 0, name: '', username: '', email: ''});
   storage = new BehaviorSubject<IUser>({} as IUser);
 
   constructor() {
