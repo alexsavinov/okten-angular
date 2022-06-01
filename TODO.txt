@@ -1,4 +1,1 @@
- - EventEmitter.
- - Pipes.
- - Behavior subject.
- - Lifecycle hook.
+- make angular frontend for www.themoviedb.org API.
