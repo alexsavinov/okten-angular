@@ -5,7 +5,7 @@ import {DataService} from "../../services";
 import {ActivatedRoute, Router, RouterModule} from "@angular/router";
 import {urls} from "../../../../constants";
 // import {FormBuilder, Validators} from "@angular/forms";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 // import {MatSta}
 
 @Component({
@@ -23,12 +23,12 @@ export class MovieComponent implements OnInit {
   merged: any;
   urls: any;
   cardStyle: {};
-  public form: FormGroup;
+  public form: UntypedFormGroup;
   // urls: {};
 
   constructor(private dataService: DataService, private router: Router, private activatedRoute: ActivatedRoute,
 
-                  private fb: FormBuilder) {
+                  private fb: UntypedFormBuilder) {
     // this.rating = 0;
     this.form = this.fb.group({
       rating: ['', Validators.required],
