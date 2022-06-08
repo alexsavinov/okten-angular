@@ -1,1 +1,5 @@
-@import '~ngx-bar-rating/themes/br-default-theme.scss';
+.card {
+  width: 180px;
+  backgroundColor: 'white';
+  borderColor: 'white';
+}

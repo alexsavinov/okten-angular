@@ -1,11 +1,49 @@
-<div *ngIf="movie">
-  <div>id: {{movie.id}}</div>
-  <div>original_title: {{movie.original_title}}</div>
-  <div>release_date: {{movie.release_date}}</div>
-  <!--  <div>genres: {{genres[0]?.id}}</div>-->
-</div>
-<div *ngIf="genres" class="d-flex">
-<!--  {{genres | json}}-->
-<!--  <app-genre *ngFor="let genre of genres" [genre]="genre"></app-genre>-->
-  <div class="rounded-pill bg-secondary text-center m-1 p-1" *ngFor="let genre of genres">{{genre.name}}</div>
+<div *ngIf="movie" class="d-flex">
+
+  <div class="d-flex flex-column m-0 p-0">
+
+    <div class="d-flex flex-row flex-column flex-md-row">
+
+      <div class="d-flex flex-column m-4 p-0">
+
+        <div class="h1 d-flex m-4 text-dark">
+          {{movie.original_title}}
+        </div>
+
+        <div class="ms-4 mb-2 d-flex " *ngIf="movie.homepage">
+          Homepage: <a href={{movie.homepage}} target="_blank"
+                       class="text-decoration-none text-dark ms-1"> {{movie.homepage}}</a>
+        </div>
+
+        <div class="ms-4 mb-2 d-flex" *ngIf="movie.genres">
+          <app-genres-list *ngFor="let genre of movie.genres" [genre]="genre"></app-genres-list>
+        </div>
+
+        <div class="ms-4 mb-4">Revenue: ${{movie.revenue?.toLocaleString()}}</div>
+
+        <div class="h4 m-4 text-dark" *ngIf="movie.overview">
+          {{movie.overview}}
+        </div>
+      </div>
+
+      <div>
+        <div class="m-4 d-flex justify-content-center" *ngIf="movie.poster_path">
+          <img class="d-block rounded" src="{{urls.images500}}{{movie.poster_path}}" alt="poster"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-4">
+      <div class="h4 mb-4">Posters</div>
+
+      <div class="posters d-flex flex-wrap justify-content-evenly">
+        <div class="w-25 m-1" *ngFor="let image of movie.images?.posters">
+          <img class="w-100" src="{{urls.images300}}{{image.file_path}}" alt="image"/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
 </div>

@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
-import {IGenre} from "../../interfaces";
-import {MovieService} from "../../../movie/services";
-import {GenreService} from "../../services";
+import {IGenre} from '../../interfaces';
+import {GenreService} from '../../services';
 
 
 @Component({
@@ -19,7 +18,6 @@ export class GenresComponent implements OnInit {
   ngOnInit(): void {
     this.genreService.getAll().subscribe(value => {
       this.genres = value.genres;
-      // console.log(this.genres);
     });
   }
 

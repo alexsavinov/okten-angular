@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {delay, Observable} from "rxjs";
+import {Observable} from "rxjs";
 
 import {urls} from "../../../constants";
-import {IGenre, IMovie, ServerResponseGenres, ServerResponseMovies} from "../interfaces";
+import {ServerResponseGenres} from "../interfaces";
 
 
 // import {Headers} from '@angular/http';
@@ -23,25 +23,8 @@ export class GenreService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll1(): Observable<ServerResponseMovies> {
-    return this.httpClient.get<ServerResponseMovies>(urls.movies, {headers: this.headers});
-  }
-
-  getById(id: string): Observable<IMovie> {
-    return this.httpClient.get<IMovie>(`${urls.movie}/${id}?append_to_response=videos,images`,{headers: this.headers});
-  }
-
   getAll(): Observable<ServerResponseGenres> {
     // console.log(urls.genres)
     return this.httpClient.get<ServerResponseGenres>(urls.genres,{headers: this.headers});
   }
 }
-
-// export const movieService = {
-//     getMovies: (pageId: number, genreId: number = 0) =>
-//         axiosService.get<ServerResponse>(`${urls.movies}?page=${pageId}` + (genreId > 0 ? `&with_genres=${genreId}` : '')),
-//     getMovieDetailsById: (movieId: number) =>
-//         axiosService.get<IMovie>(`${urls.movie}/${movieId}?append_to_response=videos,images`),
-//     getGenres: () =>
-//         axiosService.get<ServerResponseGenres>(urls.genres)
-// }

@@ -1,83 +1,37 @@
-<div class="card shadow-lg bg-body rounded text-decoration-none" style="{{cardStyle}}">
+<div class="card shadow-lg bg-body rounded text-decoration-none">
 
   <div routerLink="{{movie.id}}" class='text-decoration-none'>
     <img class="card-img" alt='image' src="{{urls.images300}}/{{movie.poster_path}}"/>
   </div>
 
-  <div class="card-body d-flex flex-column justify-content-between" style="{{cardStyle}}">
+  <div class="card-body d-flex flex-column justify-content-between">
 
     <div>
-
       <div class="card-title">
         <div routerLink="{{movie.id}}" class='text-decoration-none text-dark fs-5'>
           {{movie.title}}
         </div>
       </div>
 
-      <div class="card-subtitle mb-2 text-muted">
-        <div class="badge bg-secondary text-center m-1 p-1"
+      <div class="card-subtitle mb-0 text-muted">
+        <div class="badge bg-opacity-25 bg-secondary text-black-50 text-center me-1 p-1"
              *ngFor="let genre of movie.genres">
           {{genre?.name}}
         </div>
       </div>
 
-      <div class="card-text small">
+      <div class="card-text small" *ngIf="movie.overview">
         <div routerLink="{{movie.id}}" class='text-decoration-none text-dark small'>
-          "{{movie.overview && movie.overview.substring(0, 70) + '...'}}"
+          {{movie.overview.substring(0, 70) + '...'}}
         </div>
       </div>
-
     </div>
 
-    <div class="card-footer">
-      <div>
-        <!--        {{movie.vote_average}}-->
-        <!--                      vote_average && <StarsRating vote_average={vote_average}/>}-->
-
-        <!--<star-rating [starType]="'svg'" [rating]=movie.vote_average size="small" ></star-rating>-->
-        <!--<star-rating [starType]="'svg'" [rating]=1></star-rating>-->
-        <!--<ngx-star-rating  [id]="'rating'" [disabled]="true"></ngx-star-rating>-->
-        <!--        <form [formGroup]="form">-->
-        <!--          <ngx-star-rating formControlName="rating" [id]="'rating'" ></ngx-star-rating>-->
-        <!--&lt;!&ndash;          <div>Rating: {{form.value.rating}}</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;          <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p>&ndash;&gt;-->
-        <!--        </form>-->
-
-        <!--        <mat-star-rating [rating]="1"  [starCount]="starCount" [color]="starColor" (ratingUpdated)="onRatingChanged($event)"></mat-star-rating>-->
-
-        <bar-rating [rate]="2" [max]="5" [showText]="true" theme=""></bar-rating>
-
-      <div class="badge">
-        {{movie.release_date}}
+    <div class="card-footer border-0 g-0 p-0 d-flex justify-content-center d-flex flex-column">
+      <div class="badge bg-opacity-25 bg-secondary text-black">
         {{movie.release_date.substring(0, 4)}}
       </div>
-
     </div>
 
   </div>
-
-
 </div>
-
-<!--    <div routerLinkActive="active">-->
-<!--      &lt;!&ndash;  {{movie.id}}) <a routerLink="{{movie.id}}" [state]="{movie}">{{movie.original_title}}</a>&ndash;&gt;-->
-<!--      {{movie.id}})-->
-<!--      <button (click)="onClick()">{{movie.original_title}}</button>-->
-<!--    </div>-->
-
-
-<!--<div class="card">-->
-<!--  <img-->
-<!--    src="https://mdbootstrap.com/img/new/standard/nature/184.webp"-->
-<!--    class="card-img-top"-->
-<!--    alt="..."-->
-<!--  />-->
-<!--  <div class="card-body">-->
-<!--    <h5 class="card-title">Card title</h5>-->
-<!--    <p class="card-text">-->
-<!--      Some quick example text to build on the card title and make up the bulk of the-->
-<!--      card's content.-->
-<!--    </p>-->
-<!--    <a href="#!" class="btn btn-primary">Button</a>-->
-<!--  </div>-->
-<!--</div>-->

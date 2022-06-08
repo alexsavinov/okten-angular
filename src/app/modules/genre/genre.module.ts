@@ -1,14 +1,13 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {OverlayModule} from "@angular/cdk/overlay";
+import {NgModule} from '@angular/core';
 import {HttpClientModule} from "@angular/common/http";
+import {NgxPaginationModule} from "ngx-pagination";
 
 import {GenreComponent} from './components/genre/genre.component';
 import {GenresComponent} from './components/genres/genres.component';
 import {GenreDetailsComponent} from './components/genre-details/genre-details.component';
 import {GenreRoutingModule} from "./genre-routing.module";
 import {GenreResolveService, GenreService} from "./services";
-import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({

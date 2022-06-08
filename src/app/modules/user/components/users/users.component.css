@@ -1,9 +1,0 @@
-.container {
-  display: flex;
-  justify-content: flex-start;
-  margin: 10px;
-}
-
-.left {
-  min-width: 50%;
-}

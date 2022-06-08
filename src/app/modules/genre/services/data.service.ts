@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+// import {BehaviorSubject} from "rxjs";
 
-import {IGenre, IMovie} from "../interfaces";
+// import {IGenre, IMovie} from "../interfaces";
 
 
 @Injectable({
@@ -9,8 +9,8 @@ import {IGenre, IMovie} from "../interfaces";
 })
 export class DataService {
 
-  movieStorage = new BehaviorSubject<IMovie>({} as IMovie);
-  genresStorage = new BehaviorSubject<IGenre[]>({} as IGenre[]);
+  // movieStorage = new BehaviorSubject<IMovie>({} as IMovie);
+  // genresStorage = new BehaviorSubject<IGenre[]>({} as IGenre[]);
 
   constructor() {
   }
