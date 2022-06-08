@@ -1,0 +1,11 @@
+<div *ngIf="movie">
+  <div>id: {{movie.id}}</div>
+  <div>original_title: {{movie.original_title}}</div>
+  <div>release_date: {{movie.release_date}}</div>
+  <!--  <div>genres: {{genres[0]?.id}}</div>-->
+</div>
+<div *ngIf="genres" class="d-flex">
+<!--  {{genres | json}}-->
+<!--  <app-genre *ngFor="let genre of genres" [genre]="genre"></app-genre>-->
+  <div class="rounded-pill bg-secondary text-center m-1 p-1" *ngFor="let genre of genres">{{genre.name}}</div>
+</div>

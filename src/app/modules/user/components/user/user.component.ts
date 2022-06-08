@@ -27,6 +27,6 @@ export class UserComponent implements OnInit {
   }
 
   saveToStorage() {
-    this.dataService.storage.next(this.user);
+    this.dataService.userStorage.next(this.user);
   }
 }

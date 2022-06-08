@@ -1,13 +1,13 @@
-.container {
+.menu {
   height: 50px;
   background-color: lightgray;
   font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /*padding: 0 20%;*/
   padding: 0px;
   margin: 0px;
+  width: 100%;
 }
 
 a {
@@ -19,11 +19,10 @@ a {
   color: brown;
 }
 
-.access {
+.access a{
   display: flex;
   gap: 10px;
 }
-
 
 a {
   text-decoration: none;

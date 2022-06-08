@@ -35,7 +35,7 @@ export class UsersComponent implements OnInit {
 
   readFromStorage() {
     console.log('readFromStorage running..')
-    this.dataService.storage.subscribe(value => {
+    this.dataService.userStorage.subscribe(value => {
       console.log('readFromStorage', value);
     });
 
