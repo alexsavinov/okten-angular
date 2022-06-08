@@ -16,7 +16,7 @@ import {PaginatorComponent} from './components/paginator/paginator.component';
 import {NgxStarRatingModule} from "ngx-star-rating";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BarRatingModule} from "ngx-bar-rating";
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+// import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     FormsModule,
     ReactiveFormsModule,
     BarRatingModule,
-    FontAwesomeModule,
+    // FontAwesomeModule,
     // StarRatingModule.forRoot()
   ],
   providers: [
