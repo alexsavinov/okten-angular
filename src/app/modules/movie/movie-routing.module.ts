@@ -14,9 +14,9 @@ const routes: Routes = [
     // path: '', component: MoviesComponent, children: [
     //   {path: ':id', component: MovieDetailsComponent, resolve: {data: MovieResolveService}}
     // ]
-    path: '', component: MoviesComponent,
+    path: "", component: MoviesComponent,
   },
-  {path: ':id', component: MovieDetailsComponent, resolve: {data: MovieResolveService}}
+  {path: ":id", component: MovieDetailsComponent, resolve: {data: MovieResolveService}}
 ];
 
 @NgModule({

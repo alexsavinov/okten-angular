@@ -1,11 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IMovie} from "../../interfaces";
 import {IGenre} from "../../../genre/interfaces";
-import {DataService} from "../../services";
+// import {DataService} from "../../services";
 import {ActivatedRoute, Router, RouterModule} from "@angular/router";
 import {urls} from "../../../../constants";
 // import {FormBuilder, Validators} from "@angular/forms";
 import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
+
 // import {MatSta}
 
 @Component({
@@ -23,17 +24,10 @@ export class MovieComponent implements OnInit {
   merged: any;
   urls: any;
   cardStyle: {};
-  public form: UntypedFormGroup;
+
   // urls: {};
 
-  constructor(private dataService: DataService, private router: Router, private activatedRoute: ActivatedRoute,
-
-                  private fb: UntypedFormBuilder) {
-    // this.rating = 0;
-    this.form = this.fb.group({
-      rating: ['', Validators.required],
-    })
-
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -47,14 +41,14 @@ export class MovieComponent implements OnInit {
     //     cardStyle.borderColor = 'lightgrey';
     // }
 
-    this.dataService.genresStorage.subscribe(value => {
-      this.genres = value;
-      // console.log('MovieComponent genresStorage.genres', value);
-    });
+    // this.dataService.genresStorage.subscribe(value => {
+    //   this.genres = value;
+    //   // console.log('MovieComponent genresStorage.genres', value);
+    // });
 
-    if (this.movie.genre_ids) {
-      // this.merged = this.movie.genre_ids.map(genreId => this.genres.find(el => el.id === genreId));
-    }
+    // if (this.movie.genre_ids) {
+    //   // this.merged = this.movie.genre_ids.map(genreId => this.genres.find(el => el.id === genreId));
+    // }
     // genres.map(genre => genre && {genre.id});
   }
 

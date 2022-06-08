@@ -1,7 +1,4 @@
-export interface IGenre {
-  id: number | undefined;
-  name: string | undefined;
-}
+import {IGenre} from '../../genre/interfaces';
 
 export interface IMovie {
   id: number;
@@ -53,8 +50,4 @@ export interface ServerResponseMovies {
   page: number;
   total_pages: number;
   total_results: number;
-}
-
-export interface ServerResponseGenres {
-  genres: IGenre[];
 }
