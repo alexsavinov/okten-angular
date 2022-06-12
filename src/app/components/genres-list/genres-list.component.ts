@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IGenre} from "../../modules/genre/interfaces";
-import {ActivatedRoute} from "@angular/router";
+
+import {urls} from '../../constants';
+import {IGenre} from '../../modules/genre/interfaces';
 
 
 @Component({
@@ -12,11 +13,13 @@ export class GenresListComponent implements OnInit {
 
   @Input()
   genre: IGenre;
+  urls: any;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.urls = urls;
   }
 
 }

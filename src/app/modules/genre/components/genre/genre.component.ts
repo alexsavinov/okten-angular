@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IGenre} from "../../interfaces";
+
+import {IGenre} from '../../interfaces';
+
 
 @Component({
   selector: 'app-genre',

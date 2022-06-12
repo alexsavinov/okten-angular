@@ -1,9 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
-import {urls} from "../../../../constants";
-import {IMovie} from "../../interfaces";
-import {IGenre} from "../../../genre/interfaces";
+import {urls} from '../../../../constants';
+import {IMovie} from '../../interfaces';
 
 
 @Component({
@@ -15,17 +14,13 @@ export class MovieComponent implements OnInit {
 
   @Input()
   movie: IMovie;
-  @Input()
-  genres: IGenre[];
   urls: any;
-  cardStyle: {};
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.urls = urls;
-    this.cardStyle = {width: '180px', backgroundColor: 'white', borderColor: 'white'};
   }
 
   onClick() {

@@ -12,11 +12,11 @@
 
 a {
   text-decoration: none;
-  color: blue;
+  color: royalblue;
 }
 
 .active a{
-  color: brown;
+  color: black;
 }
 
 .access a{
@@ -24,7 +24,3 @@ a {
   gap: 10px;
 }
 
-a {
-  text-decoration: none;
-  color: blue;
-}

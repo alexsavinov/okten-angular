@@ -1,5 +1,5 @@
 .card {
   width: 180px;
-  backgroundColor: 'white';
-  borderColor: 'white';
+  background-color: white;
+  border-color: lightgray;
 }

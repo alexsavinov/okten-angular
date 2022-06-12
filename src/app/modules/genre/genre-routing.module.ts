@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {GenresComponent} from "./components/genres/genres.component";
-import {MoviesComponent} from "../movie/components/movies/movies.component";
-import {MovieDetailsComponent} from "../movie/components/movie-details/movie-details.component";
-import {MovieResolveService} from "../movie/services";
+import {GenresComponent} from './components/genres/genres.component';
+import {MoviesComponent} from '../movie/components/movies/movies.component';
+import {MovieDetailsComponent} from '../movie/components/movie-details/movie-details.component';
+import {MovieResolveService} from '../movie/services';
 
 
 const routes: Routes = [

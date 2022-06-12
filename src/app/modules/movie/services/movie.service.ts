@@ -4,10 +4,8 @@ import {Observable} from 'rxjs';
 
 import {urls} from '../../../constants';
 import {environment} from '../../../../environments/environment';
-import {ServerResponseGenres} from '../../genre/interfaces';
 import {IMovie, ServerResponseMovies} from '../interfaces';
 
-// import {Headers} from '@angular/http';
 const {auth_token} = environment;
 
 @Injectable({
@@ -15,11 +13,9 @@ const {auth_token} = environment;
 })
 export class MovieService {
 
-  auth_token = auth_token;
-
   headers = new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${this.auth_token}`
+    'Authorization': `Bearer ${auth_token}`
   })
 
   constructor(private httpClient: HttpClient) {
@@ -33,9 +29,5 @@ export class MovieService {
 
   getById(id: string): Observable<IMovie> {
     return this.httpClient.get<IMovie>(`${urls.movie}/${id}?append_to_response=videos,images`,{headers: this.headers});
-  }
-
-  getGenres(): Observable<ServerResponseGenres> {
-    return this.httpClient.get<ServerResponseGenres>(urls.genres,{headers: this.headers});
   }
 }
