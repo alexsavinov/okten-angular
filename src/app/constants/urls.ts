@@ -1,11 +1,9 @@
-import {environment} from '../../environments/environment';
+import {environment} from "../../environments/environment";
 
-const {API, ImagesAPI} = environment;
+const {API: baseURL} = environment;
 
 export const urls = {
-  movie: `${API}/movie`,
-  movies: `${API}/discover/movie`,
-  genres: `${API}/genre/movie/list`,
-  images300: `${ImagesAPI}/w300`,
-  images500: `${ImagesAPI}/w500`,
+  users: `${baseURL}/users`,
+  posts: `${baseURL}/posts`,
+  comments: `${baseURL}/comments`
 }

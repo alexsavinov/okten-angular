@@ -1,28 +1,31 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app-routing.module';
-import {HeaderComponent} from './components/header/header.component';
-import {MainLayoutComponent} from './layout/main-layout/main-layout.component';
+import {CommentComponent} from './components/comment/comment.component';
+import {CommentsComponent} from './components/comments/comments.component';
+import {PostComponent} from './components/post/post.component';
+import {PostsComponent} from './components/posts/posts.component';
+import {UserComponent} from './components/user/user.component';
+import {UsersComponent} from './components/users/users.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainLayoutComponent,
-    HeaderComponent
+    CommentComponent,
+    CommentsComponent,
+    PostComponent,
+    PostsComponent,
+    UserComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    HttpClientModule
   ],
   providers: [],
-  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
