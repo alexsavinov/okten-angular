@@ -1,2 +1,4 @@
 - make angular frontend for www.themoviedb.org API.
-
+- interceptors
+- stars rating
+- search form
