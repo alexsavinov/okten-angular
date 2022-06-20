@@ -22,25 +22,23 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
+.vscode/extensions.json
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.gitignore
 
 # Miscellaneous
 /.angular/cache
-/.angular
 .sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
 testem.log
 /typings
-/.vscode
-/node_modules
 
 # System files
 .DS_Store
 Thumbs.db
-package-lock.json

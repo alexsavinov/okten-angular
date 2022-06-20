@@ -1,11 +1,10 @@
-import {Component} from '@angular/core';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  styleUrls: ['./app.component.css'],
-  template: '<router-outlet></router-outlet>'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lesson07-hw';
+  title = 'empty-angular';
 }
