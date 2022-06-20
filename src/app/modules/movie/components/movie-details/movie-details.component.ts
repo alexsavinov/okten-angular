@@ -31,5 +31,4 @@ export class MovieDetailsComponent implements OnInit {
       this.movie = value;
     });
   }
-
 }

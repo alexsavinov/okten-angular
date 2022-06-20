@@ -21,7 +21,7 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
     this.urls = urls;
-  }
+}
 
   onClick() {
     this.router.navigate([this.movie.id], {relativeTo: this.activatedRoute});

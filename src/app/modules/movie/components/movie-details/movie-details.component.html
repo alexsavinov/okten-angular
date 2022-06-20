@@ -19,7 +19,13 @@
           <app-genres-list *ngFor="let genre of movie.genres" [genre]="genre"></app-genres-list>
         </div>
 
-        <div class="ms-4 mb-4">Revenue: ${{movie.revenue?.toLocaleString()}}</div>
+        <div class="ms-4 mb-4">
+          Revenue: ${{movie.revenue?.toLocaleString()}}
+        </div>
+
+        <div class="ms-4 mb-4">
+          <app-star-rating [rating]="movie.vote_average"></app-star-rating>
+        </div>
 
         <div class="h4 m-4 text-dark" *ngIf="movie.overview">
           {{movie.overview}}

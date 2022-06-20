@@ -21,5 +21,4 @@ export class MainLayoutComponent implements OnInit {
       map(e => e instanceof ResolveStart)
     ).subscribe(value => this.loading = value);
   }
-
 }

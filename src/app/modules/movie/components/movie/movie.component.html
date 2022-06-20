@@ -17,6 +17,8 @@
         <app-genres-list *ngFor="let genre of movie.genres" [genre]="genre"></app-genres-list>
       </div>
 
+      <app-star-rating [rating]="movie.vote_average"></app-star-rating>
+
       <div class="card-text small" *ngIf="movie.overview">
         <div routerLink="{{movie.id}}" class="text-decoration-none text-dark small">
           {{movie.overview.substring(0, 70) + "..."}}

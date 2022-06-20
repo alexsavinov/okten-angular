@@ -6,7 +6,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {GenreComponent} from './components/genre/genre.component';
 import {GenresComponent} from './components/genres/genres.component';
 import {GenreRoutingModule} from './genre-routing.module';
-import {GenreResolveService, GenreService} from './services';
+import {GenreService} from './services';
 
 
 @NgModule({
@@ -24,8 +24,7 @@ import {GenreResolveService, GenreService} from './services';
     GenreComponent
   ],
   providers: [
-    GenreService,
-    GenreResolveService
+    GenreService
   ]
 })
 export class GenreModule {

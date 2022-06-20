@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 import {GenresListComponent} from "../../components/genres-list/genres-list.component";
@@ -8,6 +8,7 @@ import {MoviesComponent} from './components/movies/movies.component';
 import {MovieDetailsComponent} from './components/movie-details/movie-details.component';
 import {MovieRoutingModule} from './movie-routing.module';
 import {MovieService} from './services';
+import {StarRatingComponent} from "../../components/star-rating/star-rating.component";
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {MovieService} from './services';
     MovieDetailsComponent,
     MovieComponent,
     GenresListComponent,
-
+    StarRatingComponent
   ],
   imports: [
     CommonModule,
@@ -25,6 +26,9 @@ import {MovieService} from './services';
   ],
   providers: [
     MovieService
+  ],
+  exports: [
+    StarRatingComponent
   ]
 })
 export class MovieModule {
