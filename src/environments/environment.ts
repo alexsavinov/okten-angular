@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API: 'https://api.themoviedb.org/3',
+  ImagesAPI: 'https://image.tmdb.org/t/p',
+  maxItems: 5000,
+  itemsPerPage: 10,
+  auth_token: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NGM3ZTNlY2I0NzkzOWM1YzJiN2U5NzZmN2Y1YTNlZCIsInN1YiI6IjYyMDAwYzNhOGYyNmJjMDBjYjEwMjgyNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.66Cde4kxeVsNVVbhnUs0lsaT83OkWgHz-epkFxRRqok'
 };
 
 /*
